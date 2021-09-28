@@ -3,10 +3,18 @@ a   {
     font-size: 18px;
 }
 
-.box {
-    position: absolute;
-    top: 50px;
-    border: 1px solid green;
-    width: 100px;
-    height: 100px;
+header {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+ol {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
 }
