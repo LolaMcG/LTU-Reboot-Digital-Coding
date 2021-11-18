@@ -16,10 +16,18 @@ header{
 
 ol {
     display: flex;
-    justify-content: space-evenly;
     width: 380px;
     list-style-type: none;
 }
+
+ol.leftlist {
+    justify-content: flex-start;
+}
+
+ol.rightlist {
+    justify-content: flex-end;
+}
+
 
 main {
     display: flex;
@@ -38,6 +46,18 @@ div.searchContainer{
     margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
+    position: relative;
+}
+
+div.searchContainer .magnifyingGlass{
+    position: absolute;
+    left: 15px;
+    top: 9px;
+}
+div.searchContainer .microphone{
+    position: absolute;
+    right: 15px;
+    top: 9px;
 }
 
 div img{
@@ -60,12 +80,20 @@ input:focus{
 }
 
 div.searchContainer:hover{
-    box-shadow: 0 8px 4px 0  rgb(216,216,216);
+    -webkit-box-shadow: 1px 3px 10px 6px rgba(0,0,0,0.46); 
+    box-shadow: 1px 3px 10px 6px rgba(0,0,0,0.46);
 }
 
-.magnifyingglass
+.magnifyingGlass
 .microphone{
     height: 30px;
     width: 30px;
     padding: 5px;
+}
+
+.leftlist li{
+    margin-right: 10px;
+}
+.rightlist li{
+    margin-left: 10px;
 }
