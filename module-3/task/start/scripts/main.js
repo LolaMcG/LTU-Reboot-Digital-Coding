@@ -59,3 +59,78 @@ function productDiscount(){
 }
 
 productDiscount();
+
+
+
+//Create function called drinkOrder which takes in 2 variables, called {drink} and {size}
+function drinkOrder(size,drink){
+    if (size != "small" && size != "medium" && size != "large"){
+        console.log("You've ordered a size we don't sell :(");
+        return;
+    }
+    let message = "You've ordered a " + size;
+
+    //SWITCH {drink} (in pseudocode, putting stuff in all caps lets you see that it's a code function)
+    //Depending on drink, change output
+    switch(drink){
+        case "cola":
+            message += " Coke";
+            break;
+        case "lemonade":
+            message += " Barr's Lemonade";
+            break;
+        case "orange":
+            message+= " Fanta";
+            break;
+        //Include default message
+        default:
+            message = "You've ordered a drink we don't sell :(";
+            break;
+    }
+    console.log(message);
+}
+drinkOrder("large", "coke");
+drinkOrder("small", "lemonade");
+drinkOrder("big", "orange");
+drinkOrder("medium", "cola");
+
+//FUNCTION calculator {num1} {num2} {operator}
+function calculator(num1, num2, operator){
+    //VALIDATE all data
+    if(isNaNValidator(num1)){
+        return "This is not a recognised number";
+    }
+    
+    if(isNaNValidator(num2)){
+        return "This is not a number";
+    }
+    let sum;
+    //SWITCH {operator}
+    switch(operator){
+        case "+":
+            sum = num1 + num2;
+            break;
+        case "-":
+            sum = num1 - num2;
+            break;
+        case "/":
+            sum = num1 / num2;
+            break;
+        case "*":
+            sum = num1 * num2;
+            break;
+        case "%":
+            sum = num1 % num2;
+            break;
+        default:
+            return "Operator is not recognised"
+    }
+    //Based on operator, do maths
+return sum;
+}
+function isNaNValidator(number){
+    return isNaN(number);
+}
+
+let sum1 = calculator(12,12,"*");
+console.log(sum1);
