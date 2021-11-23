@@ -134,3 +134,46 @@ function isNaNValidator(number){
 
 let sum1 = calculator(12,12,"*");
 console.log(sum1);
+
+
+let arrProductData = [
+    productName,
+    price,
+    quantity,
+    inStock,
+    discountAmount,
+];
+
+console.log(arrProductData);
+console.log(arrProductData[0]);
+console.log(arrProductData[3]);
+
+let objProductData = {
+    'productName': productName,
+    'price': price,
+    'quantity': quantity,
+    'inStock': inStock,
+    'discountAmount': discountAmount,
+};
+
+console.log(objProductData.productName);
+objProductData['productName'] = 'cabbage';
+console.log(objProductData.productName);
+
+objProductData.newData = 'some new data here';
+objProductData.moreData = 82;
+console.log(objProductData);
+
+
+function timesTable(number){
+    for(counter = 1;counter <= 12;counter++){
+        let sum = counter * number;
+        let strMessage = number + ' ' + '*' + ' ' + counter + ' ' + '=' + ' ' + sum;
+        console.log(strMessage);
+    }
+}
+
+timesTable(9);
+
+for(multiplier=1;multiplier <=12;multiplier++);
+    timesTable(multiplier);
