@@ -185,7 +185,31 @@ for(multiplier=1;multiplier <=12;multiplier++){
 //type = flatFee off product, percent off product, basketTotal, basketPercent
 //amount = the amount to be subtracted
 
-let objCoupon
+let objCoupon1 = {
+    types:['toiletries','condiment'],
+    type: 'flatFee',
+    amount:0.5,
+};
+
+let objCoupon2 = {
+    types:['canned','snacks'],
+    type: 'percentage',
+    amount:30,
+};
+
+let objCoupon3 = {
+    types: [''],
+    type: 'basketTotal',
+    amount:25,
+};
+
+let objCoupon4 = {
+    types:[''],
+    type: 'basketPercent',
+    amount:40,
+};
+
+
 
 function totalPriceOfShopping(shoppingCart,objCoupon=null){
     // Loop through each item of the array
