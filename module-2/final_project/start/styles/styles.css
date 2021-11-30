@@ -53,3 +53,7 @@ main, aside {
 .imageContainer div img{
     max-width: 100%;
 }
+
+.hide {
+    display: none;
+}
